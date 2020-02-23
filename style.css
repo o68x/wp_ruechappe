@@ -900,6 +900,42 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* line 1, sass/layout/_content-sidebar.scss */
+.content-area {
+  float: left;
+  margin: 0 -25% 0 0;
+  width: 100%;
+}
+
+/* line 7, sass/layout/_content-sidebar.scss */
+.site-main {
+  margin: 0 25% 0 0;
+}
+
+/* line 11, sass/layout/_content-sidebar.scss */
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 25%;
+}
+
+/* line 17, sass/layout/_content-sidebar.scss */
+.site-footer {
+  clear: both;
+  width: 100%;
+}
+
+/* line 2, sass/layout/_no-sidebar.scss */
+.no-sidebar .content-area {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 8, sass/layout/_no-sidebar.scss */
+.no-sidebar .site-main {
+  margin-right: 0;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
