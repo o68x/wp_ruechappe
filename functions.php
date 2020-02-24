@@ -159,3 +159,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * Fetch Google Fonts.
+ */
+function add_google_fonts() {
+  wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css?family=Proza+Libre|Cormorant+Garamond&display=swap' );
+}
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
