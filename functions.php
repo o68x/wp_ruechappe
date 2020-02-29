@@ -36,6 +36,12 @@ if ( ! function_exists( '_ruechappe_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
+		 * Enable support for Gutenberg images.
+		 * from editor-blocks theme @package
+		 */
+		add_theme_support( 'align-wide' );
+
+		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
@@ -74,8 +80,8 @@ if ( ! function_exists( '_ruechappe_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 100,
+			'width'       => 400,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -94,7 +100,7 @@ function _ruechappe_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( '_ruechappe_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( '_ruechappe_content_width', 1040 );
 }
 add_action( 'after_setup_theme', '_ruechappe_content_width', 0 );
 
@@ -110,8 +116,8 @@ function _ruechappe_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', '_ruechappe' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', '_ruechappe_widgets_init' );
@@ -158,7 +164,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
 
 /**
  * Fetch Google Fonts.

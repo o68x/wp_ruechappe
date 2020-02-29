@@ -1,0 +1,23 @@
+.site {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-content {
+  grid-area: main;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
+@import "no-sidebar";

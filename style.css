@@ -571,6 +571,12 @@ table {
   width: 100%;
 }
 
+/* line 35, sass/elements/_elements.scss */
+.custom-logo {
+  width: 400px;
+  height: auto;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -901,6 +907,30 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* line 1, sass/layout/_grid-content.scss */
+.site {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/* line 11, sass/layout/_grid-content.scss */
+.site-header {
+  grid-area: header;
+}
+
+/* line 15, sass/layout/_grid-content.scss */
+.site-content {
+  grid-area: main;
+}
+
+/* line 19, sass/layout/_grid-content.scss */
+.site-footer {
+  grid-area: footer;
+}
+
 /* line 2, sass/layout/_no-sidebar.scss */
 .no-sidebar .content-area {
   float: none;
