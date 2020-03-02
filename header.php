@@ -22,7 +22,9 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_ruechappe' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content">
+		<?php esc_html_e( 'Skip to content', '_ruechappe' ); ?>
+	</a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -31,10 +33,14 @@
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<p>Image NOT HERE!</p>
+
 				<?php
 			else :
 				?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p>Image HERE! <?php header_image(); ?>
+</p>
 				<?php
 			endif;
 			$_ruechappe_description = get_bloginfo( 'description', 'display' );

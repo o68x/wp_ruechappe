@@ -18,7 +18,7 @@
  */
 function _ruechappe_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( '_ruechappe_custom_header_args', array(
-		'default-image'          => '',
+		'default-image'          => get_template_directory_uri() . 'assets/default-image.jpg',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
@@ -35,6 +35,7 @@ if ( ! function_exists( '_ruechappe_header_style' ) ) :
 	 * @see _ruechappe_custom_header_setup().
 	 */
 	function _ruechappe_header_style() {
+		$header_image = get_header_image();
 		$header_text_color = get_header_textcolor();
 
 		/*
@@ -49,6 +50,14 @@ if ( ! function_exists( '_ruechappe_header_style' ) ) :
 		?>
 		<style type="text/css">
 		<?php
+		// Is there an image?
+		if ( ! empty( $header_image ) ) :
+			?>
+		.site-header {
+			background: url(<?php header_image(); ?>) no-repeat scroll top;
+			background-size: 1600px auto;
+		}
+	<?php endif;
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
 			?>
