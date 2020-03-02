@@ -122,7 +122,12 @@ function _ruechappe_widgets_init() {
 }
 add_action( 'widgets_init', '_ruechappe_widgets_init' );
 
-/**
+
+/* TODO: Include R-Debug */
+
+require( dirname(__FILE__) . rdebug/index.php)
+
+ /**
  * Enqueue scripts and styles.
  */
 function _ruechappe_scripts() {
