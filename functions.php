@@ -125,13 +125,18 @@ add_action( 'widgets_init', '_ruechappe_widgets_init' );
 
 /* TODO: Include R-Debug */
 
-require( dirname(__FILE__) . rdebug/index.php)
+// require dirname(__FILE__) . lib/rdebug.php;
 
  /**
  * Enqueue scripts and styles.
  */
 function _ruechappe_scripts() {
-	wp_enqueue_style( '_ruechappe-style', get_stylesheet_uri() );
+	/**
+	 * add pure.css
+	 */
+	 wp_enqueue_style( 'pure-css', get_stylesheet_uri() . '/css/pure/pure-min.css' );
+
+	 wp_enqueue_style( '_ruechappe-style', get_stylesheet_uri(), [ 'pure-css' ] );
 
 	wp_enqueue_script( '_ruechappe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
