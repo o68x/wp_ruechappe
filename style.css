@@ -429,7 +429,7 @@ textarea {
 /* line 1, sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: "Cormorant Garamond", sans-serif;
+  font-family: "Cormorant Garamond", "Merriweather", sans-serif;
 }
 
 /* line 1, sass/typography/_copy.scss */

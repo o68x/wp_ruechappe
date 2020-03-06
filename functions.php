@@ -36,7 +36,7 @@ if ( ! function_exists( '_ruechappe_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
-		 * Enable support for Gutenberg images.
+		 * INFO: Enable support for Gutenberg images.
 		 * from editor-blocks theme @package
 		 */
 		add_theme_support( 'align-wide' );
@@ -134,9 +134,10 @@ function _ruechappe_scripts() {
 	/**
 	 * add pure.css
 	 */
-	 wp_enqueue_style( 'pure-css', get_stylesheet_uri() . '/css/pure/pure-min.css' );
 
-	 wp_enqueue_style( '_ruechappe-style', get_stylesheet_uri(), [ 'pure-css' ] );
+	wp_enqueue_style( '_ruechappe-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( '_ruechappe-miligram', get_template_directory_uri() . '/css/milligram/milligram.css' );
 
 	wp_enqueue_script( '_ruechappe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
