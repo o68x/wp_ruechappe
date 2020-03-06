@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Olivier
 Author URI: http://ruechappe.fr
 Description: created by olivier@ruechappe.fr
-Version: 0.1.0
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: _ruechappe
@@ -696,21 +696,38 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_menus.scss */
-.main-navigation {
+#primary-menu {
+  width: 100%;
+  clear: both;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0 0 li a;
+  margin-display: inline-block;
+  margin-font-size: 18px;
+  margin-color: #09f;
+  margin-text-decoration: none;
+  margin-padding-bottom: 5px;
+  margin-margin: 0 10px 0 0;
+}
+
+/* line 19, sass/navigation/_menus.scss */
+.mainx-navigation {
   clear: both;
   display: block;
   float: left;
   width: 100%;
 }
-/* line 7, sass/navigation/_menus.scss */
-.main-navigation ul {
+/* line 25, sass/navigation/_menus.scss */
+.mainx-navigation ul {
   display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-/* line 13, sass/navigation/_menus.scss */
-.main-navigation ul ul {
+/* line 31, sass/navigation/_menus.scss */
+.mainx-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
@@ -718,68 +735,69 @@ a:hover, a:active {
   left: -999em;
   z-index: 99999;
 }
-/* line 21, sass/navigation/_menus.scss */
-.main-navigation ul ul ul {
+/* line 39, sass/navigation/_menus.scss */
+.mainx-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
-/* line 27, sass/navigation/_menus.scss */
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+/* line 45, sass/navigation/_menus.scss */
+.mainx-navigation ul ul li:hover > ul, .mainx-navigation ul ul li.focus > ul {
   left: 100%;
 }
-/* line 33, sass/navigation/_menus.scss */
-.main-navigation ul ul a {
+/* line 51, sass/navigation/_menus.scss */
+.mainx-navigation ul ul a {
   width: 200px;
 }
-/* line 46, sass/navigation/_menus.scss */
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+/* line 64, sass/navigation/_menus.scss */
+.mainx-navigation ul li:hover > ul,
+.mainx-navigation ul li.focus > ul {
   left: auto;
 }
-/* line 52, sass/navigation/_menus.scss */
-.main-navigation li {
+/* line 70, sass/navigation/_menus.scss */
+.mainx-navigation li {
+  background-color: red;
   float: left;
   position: relative;
 }
-/* line 61, sass/navigation/_menus.scss */
-.main-navigation a {
+/* line 80, sass/navigation/_menus.scss */
+.mainx-navigation a {
   display: block;
   text-decoration: none;
 }
 
 /* Small menu. */
-/* line 74, sass/navigation/_menus.scss */
+/* line 93, sass/navigation/_menus.scss */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-  /* line 80, sass/navigation/_menus.scss */
+  /* line 99, sass/navigation/_menus.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 83, sass/navigation/_menus.scss */
+  /* line 102, sass/navigation/_menus.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 92, sass/navigation/_menus.scss */
+/* line 111, sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-/* line 97, sass/navigation/_menus.scss */
+/* line 116, sass/navigation/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
 }
-/* line 102, sass/navigation/_menus.scss */
+/* line 121, sass/navigation/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -907,7 +925,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/* line 1, sass/layout/_grid-content.scss */
+/* line 1, sass/custom/_grid-content.scss */
 .site {
   min-height: 100vh;
   display: grid;
@@ -916,17 +934,17 @@ a:hover, a:active {
   grid-template-areas: "header" "main" "footer";
 }
 
-/* line 11, sass/layout/_grid-content.scss */
+/* line 11, sass/custom/_grid-content.scss */
 .site-header {
   grid-area: header;
 }
 
-/* line 15, sass/layout/_grid-content.scss */
+/* line 15, sass/custom/_grid-content.scss */
 .site-content {
   grid-area: main;
 }
 
-/* line 19, sass/layout/_grid-content.scss */
+/* line 19, sass/custom/_grid-content.scss */
 .site-footer {
   grid-area: footer;
 }
@@ -1108,8 +1126,21 @@ object {
   display: block;
 }
 
-/* line 3, sass/_simply_gallery_override.scss */
-.ruechappe_simply_gallery .pgcsimplygalleryblock-masonry-item-title {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  box-shadow: rgba(255, 255, 255, 0.3) 10px 0px 0px, rgba(255, 255, 255, 0.3) -10px 0px 0px !important;
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* line 1, sass/custom/_homepage.scss */
+.home .site-header {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("assets/default-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
 }
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
