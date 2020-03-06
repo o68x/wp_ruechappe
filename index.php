@@ -50,7 +50,7 @@ get_header();
 
 		endif;
 		?>
-		<pre>index.php</pre>
+		<?php if (WP_DEBUG) : echo '<pre>index.php</pre>'; endif; ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->

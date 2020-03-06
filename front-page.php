@@ -33,7 +33,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+		<?php if (WP_DEBUG) : echo '<pre>front-page.php</pre>'; endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

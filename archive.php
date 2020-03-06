@@ -44,6 +44,7 @@ get_header();
 
 		endif;
 		?>
+		<?php if (WP_DEBUG) : echo '<pre>archive.php</pre>'; endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

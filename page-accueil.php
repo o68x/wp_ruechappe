@@ -31,7 +31,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-		<?php if (WP_DEBUG) : echo '<pre>page.php</pre>'; endif; ?>
+		<?php if (WP_DEBUG) : echo '<pre>page-accueil.php</pre>'; endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
