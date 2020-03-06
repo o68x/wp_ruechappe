@@ -1,4 +1,22 @@
-.main-navigation {
+#primary-menu {
+	width: 100%;
+	clear: both;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0 0
+	li a {
+		display: inline-block;
+		font-size: 18px;
+		color: #09f;
+		text-decoration: none;
+		padding-bottom: 5px;
+		margin: 0 10px 0 0
+	}
+}
+
+.mainx-navigation {
 	clear: both;
 	display: block;
 	float: left;
@@ -50,6 +68,7 @@
 	}
 
 	li {
+		background-color: red;
 		float: left;
 		position: relative;
 
@@ -105,3 +124,4 @@
 		width: 50%;
 	}
 }
+

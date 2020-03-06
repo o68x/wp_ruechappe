@@ -12,12 +12,9 @@
  * @package _ruechappe
  */
 
-get_header();
+get_header( 'home' );
 ?>
-	<div class="notice">
-		<p>This is the front page!</p>
-	</div>
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area extended">
 		<main id="main" class="site-main">
 
 		<?php
