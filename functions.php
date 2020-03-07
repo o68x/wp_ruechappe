@@ -81,7 +81,7 @@ if ( ! function_exists( '_ruechappe_setup' ) ) :
 		 */
 		add_theme_support( 'custom-logo', array(
 			'height'      => 100,
-			'width'       => 400,
+			'width'       => 100,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );

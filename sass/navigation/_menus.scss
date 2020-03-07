@@ -4,18 +4,22 @@
 	display: flex;
 	flex-direction: row;
 	list-style: none;
-  border-bottom: 1px solid #ccc;
-  margin: 20px 0 0
-	li a {
-		display: inline-block;
-		font-size: 18px;
+  // border-bottom: 1px solid #ccc;
+	margin: 0;
+	padding: 0;
+	li {
+		display: block;
+		a {
+		font-size: 2em;
 		color: #09f;
 		text-decoration: none;
 		padding-bottom: 5px;
 		margin: 0 10px 0 0
+		}
 	}
 }
 
+// deactivated 2020-03-06
 .mainx-navigation {
 	clear: both;
 	display: block;

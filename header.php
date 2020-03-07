@@ -37,18 +37,18 @@
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 				<?php
 			endif;
 			$_ruechappe_description = get_bloginfo( 'description', 'display' );
 			if ( $_ruechappe_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $_ruechappe_description; /* WPCS: xss ok. */ ?></p>
+				<span class="site-description"><?php echo $_ruechappe_description; /* WPCS: xss ok. */ ?></span>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_ruechappe' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_ruechappe' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
